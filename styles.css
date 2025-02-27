@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('gulf.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+header {
+    background: transparent;
+    padding: 15px 0;
+    width: 100%;
+    z-index: 10;
+    position: fixed; /* Keep navbar fixed on top */
+    top: 0; /* Ensure it stays at the top */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 2px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* Default font color */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+
+/* Booking Form */
+.booking-form {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 30px auto; /* Center the form with margin */
+    z-index: 1; /* Ensure it's above other elements */
+    margin-top: 300px; /* Space between hero section and form */
+}
+
+/* Ensure enough space below the booking form */
+.main-content {
+    flex-grow: 1; /* Allow the main content to grow and take available space */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px; /* Add some padding */
+}
+
+/* Booking Form Fields */
+.booking-form h2 {
+    margin-bottom: 20px;
+    color: #002147;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.booking-form label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.booking-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Booking Button */
+.booking-form button {
+    background: #002147;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    margin-left: auto;
+}
+
+.booking-form button:hover {
+    background: #004080;
+}
+
+/* Footer (Always Below Everything) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #002147;
+    color: white;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Logo */
+.logo img {
+    height: 60px; /* Adjust logo height */
+    margin-left: 50px;
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+}
+
+.popup h2 {
+    margin: 0 0 10px;
+    color: #002147;
+}
+
+.popup p {
+    margin: 0 0 20px;
+}
+
+.close-popup {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #002147;
+}
+
+/* Scroll Effects for Navbar */
+body.scrolled header {
+    background: white; /* Change background to white when scrolling */
+}
+
+body.scrolled nav ul li a {
+    color: black; /* Change text color to black when scrolling */
+}
